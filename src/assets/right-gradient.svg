@@ -1,0 +1,27 @@
+<svg width="639" height="1024" viewBox="0 0 639 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_n_69_8)">
+<ellipse cx="795.5" cy="305" rx="795.5" ry="801" fill="url(#paint0_radial_69_8)"/>
+</g>
+<defs>
+<filter id="filter0_n_69_8" x="0" y="-496" width="1591" height="1602" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.5 0.5" stitchTiles="stitch" numOctaves="3" result="noise" seed="1550" />
+<feColorMatrix in="noise" type="luminanceToAlpha" result="alphaNoise" />
+<feComponentTransfer in="alphaNoise" result="coloredNoise1">
+<feFuncA type="discrete" tableValues="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "/>
+</feComponentTransfer>
+<feComposite operator="in" in2="shape" in="coloredNoise1" result="noise1Clipped" />
+<feFlood flood-color="rgba(0, 0, 0, 0.25)" result="color1Flood" />
+<feComposite operator="in" in2="noise1Clipped" in="color1Flood" result="color1" />
+<feMerge result="effect1_noise_69_8">
+<feMergeNode in="shape" />
+<feMergeNode in="color1" />
+</feMerge>
+</filter>
+<radialGradient id="paint0_radial_69_8" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(795.5 305) rotate(90) scale(801 795.5)">
+<stop stop-color="#6F5EBC"/>
+<stop offset="1" stop-color="#264AB7" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

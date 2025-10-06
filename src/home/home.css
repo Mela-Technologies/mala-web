@@ -1,0 +1,94 @@
+.section-wrapper {
+  max-width: 1400px;
+}
+.nav-wrapper {
+  opacity: 20;
+  backdrop-filter: blue(2px);
+  background-color: rgba(255, 255, 255, 0.129);
+}
+nav li {
+  list-style-type: none;
+}
+
+.grid-background {
+  z-index: -1;
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  offset: unset;
+  background: url("./src/assets/grid.svg") no-repeat center;
+  background-size: cover;
+
+  /* Mask the background */
+  -webkit-mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: cover;
+
+  mask-image: radial-gradient(circle, black, transparent 60%);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+}
+.background-right {
+  z-index: 1;
+  /* border-radius: 100%; */
+  width: 900px;
+  height: 950px;
+  right: -300px;
+  top: -100px;
+  position: absolute;
+  /* background: radial-gradient(
+    ellipse farthest-side at center,
+    #6f5ebc 0%,
+    #264ab700 100%
+  ); */
+  background-image: url("./src/assets/right-gradient.svg");
+  background-size: cover;
+  /* filter: blur(20px); */
+  /* opacity: 0.9; */
+}
+.background-left {
+  background-image: url("./src/assets/left-gradient.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 1200px;
+  height: 1200px;
+  position: absolute;
+  left: -30%;
+  top: 0%;
+}
+
+.star-one {
+  background-color: transparent;
+  animation: scaler 1s linear infinite alternate;
+}
+.star-two {
+  animation: rotate 20s linear infinite reverse;
+}
+.world-img {
+  animation: rotate 30s linear infinite;
+}
+
+@keyframes scaler {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
