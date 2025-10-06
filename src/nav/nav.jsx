@@ -111,25 +111,79 @@ const NavSection = () => {
       </section>
 
       {/* Mobile menu (below header) */}
+      {/* Mobile menu (fullscreen fixed overlay) */}
       <div
         id="mobile-menu"
         ref={menuRef}
-        className={`md:hidden transition-[max-height,opacity,transform] duration-200 ease-in-out overflow-hidden ${
-          isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+        aria-hidden={!isOpen}
+        className={`md:hidden fixed inset-0 z-50 transition-opacity duration-300 ${
+          isOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
       >
-        <div className="mx-4 mt-3 mb-4 rounded-lg bg-cyan-400/40 backdrop-blur-md shadow-sm">
-          <ul className="flex flex-col gap-2 p-4 text-white">
-            {items.map((it) => (
-              <li
-                key={it}
-                className="py-3 px-4 rounded-lg hover:bg-white/10 cursor-pointer"
+        {/* Backdrop: click to close */}
+        <button
+          type="button"
+          onClick={() => setIsOpen(false)}
+          aria-hidden="true"
+          className={`absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${
+            isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
+        />
+
+        {/* Panel container (stopPropagation so clicks inside don't close) */}
+        <div
+          className="relative h-full w-full flex items-start justify-end"
+          onClick={(e) => e.stopPropagation()}
+        >
+          {/* Sliding panel (from right). Change w-[92%] / max-w-sm to adjust width */}
+          <aside
+            className={`h-full w-[92%] max-w-sm bg-cyan-600/65 text-white p-6 overflow-y-auto transform transition-transform duration-300 ${
+              isOpen ? "translate-x-0" : "translate-x-full"
+            }`}
+          >
+            {/* Close button */}
+            <div className="flex items-center justify-end mb-4">
+              <button
                 onClick={() => setIsOpen(false)}
+                aria-label="Close mobile menu"
+                className="p-2 rounded-md focus:outline-none"
               >
-                {it}
-              </li>
-            ))}
-          </ul>
+                {/* simple inline close icon (works without iconsax) */}
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden
+                >
+                  <path
+                    d="M6 6l12 12M6 18L18 6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            {/* Menu items */}
+            <nav>
+              <ul className="flex flex-col gap-3">
+                {items.map((it) => (
+                  <li
+                    key={it}
+                    className="py-3 px-4 rounded-lg hover:bg-white/10 cursor-pointer text-lg"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {it}
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </aside>
         </div>
       </div>
     </header>
