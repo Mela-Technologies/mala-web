@@ -111,7 +111,6 @@ const NavSection = () => {
       </section>
 
       {/* Mobile menu (below header) */}
-      {/* Mobile menu (fullscreen fixed overlay) */}
       <div
         id="mobile-menu"
         ref={menuRef}
@@ -150,7 +149,6 @@ const NavSection = () => {
                 aria-label="Close mobile menu"
                 className="p-2 rounded-md focus:outline-none"
               >
-                {/* simple inline close icon (works without iconsax) */}
                 <svg
                   width="20"
                   height="20"

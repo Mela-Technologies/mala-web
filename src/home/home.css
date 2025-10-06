@@ -28,32 +28,22 @@
 }
 .background-right {
   z-index: 1;
-  /* border-radius: 100%; */
-  width: 900px;
-  height: 950px;
-  right: -300px;
-  top: -100px;
+  right: -20%;
+  top: -50px;
   position: absolute;
-  /* background: radial-gradient(
-    ellipse farthest-side at center,
-    #6f5ebc 0%,
-    #264ab700 100%
-  ); */
-  background-image: url("/image/right-gradient.svg");
-  background-size: cover;
-  /* filter: blur(20px); */
-  /* opacity: 0.9; */
+}
+.background-right img {
+  width: 900px;
+  height: 1200px;
 }
 .background-left {
-  background-image: url("/image/left-gradient.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 1200px;
-  height: 1200px;
   position: absolute;
-  left: -30%;
+  left: -10%;
   top: 0%;
+}
+.background-left img {
+  width: 500px;
+  height: 900px;
 }
 .here-img {
   display: block;

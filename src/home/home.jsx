@@ -15,8 +15,12 @@ const HomePage = () => {
       {/* Top section */}
       <NavSection />
       {/* background colors */}
-      <div className="background-right hidden md:block"></div>
-      <div className="background-left"></div>
+      <div className="background-right hidden md:block">
+        <img src="/image/right-gradient.png" alt="" />
+      </div>
+      <div className="background-left">
+        <img src="/image/left-gradient.png" alt="" />
+      </div>
       {/*hero overlays  */}
       <div className="hero-overlays">
         <img className="absolute star-one" src={star1} alt="start" />
