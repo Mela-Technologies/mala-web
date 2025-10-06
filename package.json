@@ -2,7 +2,7 @@
   "name": "melatech",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://mela-technologies.github.io/mala-web/",
+  "homepage":"https://mela-technologies.github.io/mala-web/",
   "type": "module",
   "scripts": {
     "dev": "vite",
