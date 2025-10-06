@@ -1,14 +1,6 @@
 .section-wrapper {
   max-width: 1400px;
 }
-.nav-wrapper {
-  opacity: 20;
-  backdrop-filter: blue(2px);
-  background-color: rgba(255, 255, 255, 0.129);
-}
-nav li {
-  list-style-type: none;
-}
 
 .grid-background {
   z-index: -1;
@@ -63,12 +55,20 @@ nav li {
   left: -30%;
   top: 0%;
 }
-
+.here-img {
+  display: block;
+}
 .star-one {
   background-color: transparent;
+  inset: 32% auto auto 40%;
+  display: inline-block;
+  z-index: 20;
   animation: scaler 1s linear infinite alternate;
 }
 .star-two {
+  inset: auto auto 15% 30%;
+  display: inline-block;
+  z-index: 20;
   animation: rotate 20s linear infinite reverse;
 }
 .world-img {
@@ -90,5 +90,34 @@ nav li {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* breakpoint */
+
+@media screen and (max-width: 900px) {
+  .hero-img {
+    display: none;
+  }
+  .hero-section {
+    justify-content: center;
+  }
+  .background-right {
+    z-index: 1;
+    width: 900px;
+    height: 950px;
+    right: -300px;
+    top: -100px;
+  }
+  .background-left {
+    width: 700px;
+    height: 1000px;
+    position: absolute;
+    left: -30%;
+    top: 0%;
+  }
+  .logo-wrapper {
+    width: 100px;
+    height: auto;
   }
 }
