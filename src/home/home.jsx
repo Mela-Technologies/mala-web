@@ -4,6 +4,7 @@ import "./home.css";
 import world from "../assets/world.webp";
 import star1 from "../assets/star1.svg";
 import star2 from "../assets/star2.svg";
+// import gridImg from "../assets/grid.svg";
 const HomePage = () => {
   return (
     <div
