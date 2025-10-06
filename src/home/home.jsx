@@ -15,7 +15,7 @@ const HomePage = () => {
       {/* Top section */}
       <NavSection />
       {/* background colors */}
-      <div className="background-right"></div>
+      <div className="background-right hidden md:block"></div>
       <div className="background-left"></div>
       {/*hero overlays  */}
       <div className="hero-overlays">
@@ -25,12 +25,7 @@ const HomePage = () => {
       {/* hero section */}
       <section className="hero-section flex flex-row z-10 relative gap-4 justify-between px-12 md:px-0">
         <div className="grid-background"></div>
-        <div
-          className="hero-title "
-          style={{
-            marginTop: "200px",
-          }}
-        >
+        <div className="hero-title mt-12 md:mt-[200px] ">
           <h1 className="text-6xl md:text-7xl text-white font-bold">
             <span
               style={{
