@@ -5,6 +5,7 @@ import "./footer.css";
 const Footer = () => {
   const navLink = ["Home", "About Us", "Services", "Contact"];
   const socialLink = ["LinkedIn", "Facebook", "Tiktok", "Telegram"];
+  const contactLink = ["Phone: +251 973930163", "Email: info@melatech"];
   return (
     <footer className="section-wrapper">
       <section className="flex flex-col md:flex-row flex-wrap md:justify-between gap-4">
@@ -20,8 +21,8 @@ const Footer = () => {
           </div>
           {/* description */}
           <p className="text-white/80 max-w-[500px]">
-            Tokenix empowers users to launch secure, scalable blockchain
-            projects using powerful no-code tools and seamless Web3 integration.
+            Melatech Solution is a creative, tech-driven team that builds smart,
+            user-friendly digital solutions to help businesses grow and thrive.
           </p>
         </div>
         {/* links */}
@@ -42,6 +43,17 @@ const Footer = () => {
             <p className="font-bold mb-4">Social</p>
             <ul className="text-white/80 flex flex-col gap-4">
               {socialLink.map((link, index) => (
+                <div key={index} className="">
+                  <Link>{link}</Link>
+                </div>
+              ))}
+            </ul>
+          </div>
+          {/* Contact */}
+          <div>
+            <p className="font-bold mb-4">Contact</p>
+            <ul className="text-white/80 flex flex-col gap-4">
+              {contactLink.map((link, index) => (
                 <div key={index} className="">
                   <Link>{link}</Link>
                 </div>
