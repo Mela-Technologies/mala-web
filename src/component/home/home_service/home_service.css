@@ -1,0 +1,69 @@
+.background-blue {
+  position: absolute;
+  z-index: 0;
+  top: -50%;
+  left: 0;
+  width: 1200px;
+  height: 1200px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(30, 200, 191, 0.582),
+    rgba(80, 0, 150, 0.1),
+    transparent 80%
+  );
+  filter: blur(90px);
+  opacity: 0.8;
+  /* animation: smoothGlow 12s ease-in-out infinite alternate; */
+  transition: all 0.8s ease;
+}
+
+@keyframes smoothGlow {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.05) translate(10px, 10px);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(1) translate(-10px, -10px);
+    opacity: 0.7;
+  }
+}
+
+.background-purple {
+  position: absolute;
+  z-index: 0;
+  top: 10%;
+  left: 10%;
+  border-radius: 100%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    ellipse farthest-side,
+    rgba(152, 28, 177, 0.623),
+    rgba(170, 11, 170, 0)
+  );
+  opacity: 0.8;
+  filter: blur(60px);
+  /* mix-blend-mode: soft-light; */
+}
+
+.background-green {
+  position: absolute;
+  z-index: 0;
+  bottom: -70%;
+  right: -40%;
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(163, 200, 30, 0.582),
+    rgba(80, 0, 150, 0.1),
+    transparent 80%
+  );
+  filter: blur(90px);
+}

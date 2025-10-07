@@ -37,14 +37,14 @@ const NavSection = () => {
 
   return (
     <header className="w-full px-4 md:px-8 py-3">
-      <section className="max-w-[1200px] mx-auto flex items-center justify-between">
+      <section className="section-wrapper mx-auto flex items-center justify-between">
         {/* Logo */}
-        <div className="logo-wrapper flex-shrink-0">
+        <div className="logo-wrapper flex-shrink-0 relative z-30">
           <img
             src={Logo}
             alt="mela-tech logo"
             className="object-contain w-full h-full"
-            style={{ maxWidth: 220, maxHeight: 72 }}
+            style={{ maxWidth: 150, maxHeight: 62 }}
           />
         </div>
 
