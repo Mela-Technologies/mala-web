@@ -1,0 +1,9 @@
+---
+deployment:
+  tasks:
+    - export NODE_ENV=production
+    - cd $HOME/react_site      # <-- replace with your repo folder if different
+    - npm install
+    - npm run build
+    - rm -rf $HOME/public_html/*
+    - cp -r build/* $HOME/public_html/
