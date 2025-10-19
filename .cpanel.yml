@@ -17,4 +17,4 @@ deployment:
     - rm -rf $HOME/public_html/*
 
     # Copy the new build to public_html
-    - cp -r build/* $HOME/public_html/
+    - cp -r dist/* $HOME/public_html/
