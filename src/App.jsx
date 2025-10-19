@@ -4,6 +4,7 @@ import HomeAbout from "./component/home/after_hero/after_hero";
 import HomeService from "./component/home/home_service/home_service";
 import Footer from "./footer/footer";
 import HomePage from "./home/home";
+import HomeProducts from "./component/products/products";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
           <HomeAbout />
           <span className="block my-28"></span>
           <HomeService />
+          <span className="block my-28"></span>
+          <HomeProducts />
           <span className="block my-28"></span>
           <Footer />
         </div>
