@@ -1,9 +1,20 @@
 ---
 deployment:
   tasks:
+    # Set production environment
     - export NODE_ENV=production
-    - cd $HOME/react_site      # <-- replace with your repo folder if different
+
+    # Navigate to the cloned repo
+    - cd $HOME/repositories/mala-web
+
+    # Install dependencies
     - npm install
+
+    # Build the React app
     - npm run build
+
+    # Clear the public_html folder (remove old site)
     - rm -rf $HOME/public_html/*
+
+    # Copy the new build to public_html
     - cp -r build/* $HOME/public_html/
