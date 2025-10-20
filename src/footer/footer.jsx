@@ -63,10 +63,10 @@ const Footer = () => {
         </div>
       </section>
       {/* divider */}
-      <div className="my-16 dhr">
+      <div className="py-16 dhr">
         <hr className="text-gray-100/20 " />
         <p className="text-white/50 my-4 text-center">
-          © All rights reserved. MellaTech
+          © All rights reserved. MellaInnovation
         </p>
       </div>
     </footer>

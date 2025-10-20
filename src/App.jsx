@@ -9,18 +9,18 @@ import HomeProducts from "./component/products/products";
 function App() {
   return (
     <BrowserRouter>
-      <div className="bg-black h-min-100 overflow-hidden">
+      <div className="bg-black h-min-100 overflow-clip">
         <div className="">
           <HomePage />
-          <span className="block my-28"></span>
-          <HomeAbout />
-          <span className="block my-28"></span>
-          <HomeService />
-          <span className="block my-28"></span>
-          <HomeProducts />
-          <span className="block my-28"></span>
-          <Footer />
         </div>
+        <span className="block my-28"></span>
+        <HomeAbout />
+        <span className="block my-28"></span>
+        <HomeService />
+        <span className="block my-28"></span>
+        <HomeProducts />
+        <span className="block my-28"></span>
+        <Footer />
       </div>
     </BrowserRouter>
   );

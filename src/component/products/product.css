@@ -1,0 +1,26 @@
+.p-grid-background {
+  /* z-index: -1; */
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  offset: unset;
+  top: -20px;
+  left: -20px;
+  background: url("/image/grid_light.svg") no-repeat center;
+  background-size: cover;
+
+  /* Mask the background */
+  -webkit-mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: cover;
+
+  mask-image: radial-gradient(circle, black, transparent 60%);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+}

@@ -36,7 +36,7 @@ const HomePage = () => {
                 color: "#00FFFF",
               }}
             >
-              Mella Technology{" "}
+              Mella Innovation{" "}
             </span>{" "}
             <br /> New Possibilities
           </h1>

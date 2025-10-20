@@ -30,14 +30,14 @@ migration services.`,
     },
   ];
   return (
-    <div className="section-wrapper px-16 py-32 bg-white/5 rounded-2xl relative overflow-hidden mx-2 md:mx-auto">
+    <div className="section-wrapper px-16 py-32 bg-white/5 rounded-2xl relative  overflow-clip mx-2 md:mx-auto">
       {/* background tiel  */}
-      <div className="background-blue"></div>
+      <div className="background-blue "></div>
       {/* background purple */}
       <div className="background-purple"></div>
       {/* flex div */}
-      <section className="flex flex-col md:flex-row gap-8 z-10 relative ">
-        <div className="text-white max-w-[700px]">
+      <section className="flex flex-col md:flex-row gap-8 z-10 border ">
+        <div className="text-white max-w-[700px] sticky top-40 self-start ">
           {/* title */}
           <h1 className="text-5xl md:text-7xl font-bold ">
             Building the Future with Mella Solutions
