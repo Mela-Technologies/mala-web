@@ -1,22 +1,25 @@
----
 deployment:
   tasks:
-    # Set production environment
+    # Ensure production environment
     - export NODE_ENV=production
 
-    # Navigate to the cloned repository
+    # Navigate to the repository
     - cd $HOME/repositories/mala-web
 
+    # Ensure Node.js version is correct (adjust version if needed)
+    - nvm install 20
+    - nvm use 20
+
     # Install npm dependencies
-    - npm install
+    - npm ci
 
     # Build the React (Vite) app
     - npm run build
 
-    # Clear the public_html folder but keep .htaccess if it exists
+    # Clear public_html but keep .htaccess if exists
     - find $HOME/public_html -mindepth 1 ! -name ".htaccess" -exec rm -rf {} +
 
-    # Copy the new build to public_html
+    # Copy build output to public_html
     - cp -r dist/* $HOME/public_html/
 
     # Restore .htaccess from repo if you have a custom one
