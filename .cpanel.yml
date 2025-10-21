@@ -1,26 +1,11 @@
+---
 deployment:
   tasks:
-    # Ensure production environment
-    - export NODE_ENV=production
-
-    # Navigate to the repository
-    - cd $HOME/repositories/mala-web
-
-    # Ensure Node.js version is correct (adjust version if needed)
-    - nvm install 20
-    - nvm use 20
-
-    # Install npm dependencies
-    - npm ci
-
-    # Build the React (Vite) app
-    - npm run build
-
-    # Clear public_html but keep .htaccess if exists
-    - find $HOME/public_html -mindepth 1 ! -name ".htaccess" -exec rm -rf {} +
-
-    # Copy build output to public_html
-    - cp -r dist/* $HOME/public_html/
-
-    # Restore .htaccess from repo if you have a custom one
-    - if [ -f $HOME/repositories/mala-web/.htaccess ]; then cp $HOME/repositories/mala-web/.htaccess $HOME/public_html/; fi
+    - "set -e"
+    - "cd $HOME/repositories/mala-web || exit 1"
+    - 'export NVM_DIR="$HOME/.nvm" && if [ -s "$NVM_DIR/nvm.sh" ]; then . "$NVM_DIR/nvm.sh" && nvm install 20 && nvm use 20; fi'
+    - "if [ -f package-lock.json ]; then npm ci --prefer-offline --no-audit --progress=false; else npm install --no-audit --progress=false; fi"
+    - "export NODE_ENV=production && npm run build"
+    - 'find $HOME/public_html -mindepth 1 ! -name ".htaccess" -exec rm -rf {} + || true'
+    - "cp -a dist/. $HOME/public_html/"
+    - "if [ -f $HOME/repositories/mala-web/.htaccess ]; then cp $HOME/repositories/mala-web/.htaccess $HOME/public_html/; fi"
