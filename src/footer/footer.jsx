@@ -5,7 +5,10 @@ import "./footer.css";
 const Footer = () => {
   const navLink = ["Home", "About Us", "Services", "Contact"];
   const socialLink = ["LinkedIn", "Facebook", "Tiktok", "Telegram"];
-  const contactLink = ["Phone: +251 973930163", "Email: info@melatech"];
+  const contactLink = [
+    "Phone: +251 973930163",
+    "Email: info@mellainnovation.com",
+  ];
   return (
     <footer className="section-wrapper">
       <section className="flex flex-col md:flex-row flex-wrap md:justify-between gap-4">
@@ -21,8 +24,9 @@ const Footer = () => {
           </div>
           {/* description */}
           <p className="text-white/80 max-w-[500px]">
-            Melatech Solution is a creative, tech-driven team that builds smart,
-            user-friendly digital solutions to help businesses grow and thrive.
+            Melatech Innovation is a creative, tech-driven team that builds
+            smart, user-friendly digital solutions to help businesses grow and
+            thrive.
           </p>
         </div>
         {/* links */}

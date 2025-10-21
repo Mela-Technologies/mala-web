@@ -41,7 +41,7 @@ const HomePage = () => {
             <br /> New Possibilities
           </h1>
           <p className="my-4 text-gray-300 max-w-[600px] text-center">
-            Melatech Solution is a creative and tech-driven company focused on
+            Melatech Innovation is a creative and tech-driven company focused on
             delivering smart, scalable, and user-friendly digital solutions.{" "}
           </p>
           {/* hero-button */}

@@ -1,7 +1,7 @@
 .p-grid-background {
   /* z-index: -1; */
-  width: 600px;
-  height: 600px;
+  width: 500px;
+  height: 500px;
   position: absolute;
   offset: unset;
   top: -20px;
@@ -23,4 +23,32 @@
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: cover;
+}
+.map-background {
+  /* z-index: -1; */
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  offset: unset;
+  top: 300px;
+  left: 0;
+  background: url("/image/map.png") no-repeat center;
+  background-size: contain;
+}
+.p-background-blue {
+  position: absolute;
+  z-index: 0;
+  bottom: -50%;
+  left: -10%;
+  border-radius: 100%;
+  width: 1200px;
+  height: 1200px;
+  background: radial-gradient(
+    circle farthest-side,
+    rgba(17, 87, 167, 0.323) 20%,
+    rgba(3, 0, 3, 0)
+  );
+  opacity: 1;
+  filter: blur(10px);
+  /* mix-blend-mode: soft-light; */
 }

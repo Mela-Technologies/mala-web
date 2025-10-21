@@ -37,10 +37,10 @@ migration services.`,
       <div className="background-purple"></div>
       {/* flex div */}
       <section className="flex flex-col md:flex-row gap-8 z-10 border ">
-        <div className="text-white max-w-[700px] sticky top-40 self-start ">
+        <div className="text-white max-w-[700px] relative md:sticky md:top-40 top-0 self-start ">
           {/* title */}
           <h1 className="text-5xl md:text-7xl font-bold ">
-            Building the Future with Mella Solutions
+            Building the Future with Mella Innovational Tech
           </h1>
           {/* description */}
           <p className="mt-6">
